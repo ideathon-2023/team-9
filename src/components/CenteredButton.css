@@ -1,0 +1,24 @@
+/* CenteredButton.css */
+.centered-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ height: 200px;
+  }
+  
+  .outlined-button {
+    padding: 10px 20px;
+    border: 2px solid #007bff; /* Outline color */
+    border-radius: 5px;
+    font-size: 18px;
+    color: #007bff; /* Text color */
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .outlined-button:hover {
+    background-color: #007bff; /* Background color on hover */
+    color: #fff; /* Text color on hover */
+  }
+  

@@ -1,0 +1,14 @@
+#header-new nav .navWrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 14px 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
