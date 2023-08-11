@@ -1,0 +1,9 @@
+img{
+    overflow-x: hidden;
+    margin-top: 30vh;
+    transform: translateY(300px);
+    transform: scale(2);
+    overflow: hidden;
+    
+
+}

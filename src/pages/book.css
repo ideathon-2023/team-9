@@ -1,0 +1,29 @@
+.pool{
+    height: 80vh;
+    background-color: rgb(244, 231, 220);
+    padding: 80px;
+   
+  }
+  
+  .sexy{
+    box-shadow: 2px 2px 5px;
+  color: white;
+  text-shadow: 1px 1px 3px;
+   height: 80%;
+    width: 94%;
+    background-image: linear-gradient(rgb(101, 66, 25), rgb(64, 44, 27));
+    padding: 20px;
+    transform: translateY(25px);
+    font-size: 25px;
+    border-radius: 15px;
+  }
+  
+  .label{
+    height: 500px;
+  }
+  
+  .search{
+    background-color: blanchedalmond;
+    color: black;
+  }
+ 
