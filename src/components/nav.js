@@ -8,7 +8,7 @@ const Navbar = () => {
     <nav>
       <section className='left'>
       <ul>
-        <li><a href="/home">🏠 Home</a></li>
+        <li><a href="/">🏠 Home</a></li>
         <li ><a href="/book">📅 Book Appointment</a></li>
         
         <li><a href="/doctor">🙍 Doctors</a></li>
