@@ -1,50 +1,10 @@
-import React, { useState } from 'react';
-import "./book.css";
-import image11 from "./image11.jpg";
-import SearchBar from './SearchBar';
-import doctorImg01 from "../assets/images/doctor-img01.png";
-import doctorImg02 from "../assets/images/doctor-img02.png";
-import doctorImg03 from "../assets/images/doctor-img03.png";
-import doctorImg04 from "../assets/images/doctor-img04.png";
-import doctorImg05 from "../assets/images/doctor-img05.png";
-import doctorImg06 from "../assets/images/doctor-img06.jpg";
-import doctorImg07 from "../assets/images/doctor-img07.png";
-import doctorImg08 from "../assets/images/doctor-img08.png";
-import doctorImg09 from "../assets/images/doctor-img09.jpg";
-import doctorImg10 from "../assets/images/doctor-img10.jpeg";
-import doctorImg11 from "../assets/images/doctor-img11.png";
-import doctorImg12 from "../assets/images/doctor-img12.png";
-import doctorImg13 from "../assets/images/doctor-img13.jpg";
-import doctorImg14 from "../assets/images/doctor-img14.png";
-import doctorImg15 from "../assets/images/doctor-img15.png";
-import doctorImg16 from "../assets/images/doctor-img16.png";
-import doctorImg17 from "../assets/images/doctor-img17.png";
-import doctorImg18 from "../assets/images/doctor-img18.png";
-import doctorImg19 from "../assets/images/doctor-img19.png";
-import doctorImg20 from "../assets/images/doctor-img20.jpg";
-import doctorImg21 from "../assets/images/doctor-img21.png";
-import doctorImg22 from "../assets/images/doctor-img22.png";
+import React from "react";
 
-import starIcon from "../assets/images/Star.png";
-import { Link } from 'react-router-dom';
-import "./Doctor.css";
+import DoctorCard from "./DoctorCard";
+import "./doctorlist.css";
 
-const Book = () => {
-  const [selectedSpecialty, setSelectedSpecialty] = useState('');
-  
-  const specialties = [
-    'Surgeon',
-    'Neurologist',
-    'Dermatologist',
-    'Neuro Surgery',
-    'Oncology',
-    'Pediatrics',
-    'Gastroenterology',
-    'Medicine',
 
-  ];
-
-  const doctorsData = [
+const doctors3 = [
     {
       id: "01",
       name: "Dr. Alfaz Ahmed",
@@ -268,96 +228,14 @@ const Book = () => {
   ];
   
 
-  const handleSpecialtyChange = (event) => {
-    setSelectedSpecialty(event.target.value);
-  };
-
-  /*const handleSearch = () => {
-    // Implement your search functionality here based on the selectedSpecialty
-    console.log('Searching for:', selectedSpecialty);
-  }; */
-
-
-  {
-    const [filteredDoctors, setFilteredDoctors] = useState([]);
-
-    const handleSearch = (searchQuery, selectedSpecialty) => {
-        let filtered = doctorsData;
-
-        if (selectedSpecialty) {
-            filtered = filtered.filter(doctor =>
-                doctor.specialization.toLowerCase() === selectedSpecialty.toLowerCase()
-            );
-        }
-
-        if (searchQuery) {
-            filtered = filtered.filter(doctor =>
-                doctor.name.toLowerCase().includes(searchQuery.toLowerCase())
-            );
-        }
-
-        setFilteredDoctors(filtered);
-    };
-
-  return (
-    <div className='pool'>
-  
-    <div className='sexy'>
-      <h1>Book Medical Appointment</h1>
-      <div className='man'><label className="label" htmlFor="specialty">Choose a Medical Specialty:</label></div>
-      <div className="app">
-    
-            <SearchBar  specialties={specialties} onSearch={handleSearch} />
-          
+const DoctorList3 = () => {
+    return (
+        <div className="list">
+           {doctors3.map(doctor => (<DoctorCard  key={doctor.id} doctor={doctor}/>))}
         </div>
-      
-    </div>
-    <div className='liste'>
-                {filteredDoctors.map(doctor => (
-                    <div className='listey' key={doctor.id}>
-                       <div className='doctorcard'>
-            <div className="docpic">
-                <img className="docpix" src={doctor.photo}  alt='#' />
-            </div>
-            <hr />
-            <h2 className='name'>{doctor.name}</h2>
-
-            <div className='infod'>
-                <span className='spec'>{doctor.specialization}</span>
-
-                <div>
-                    <span><img className="star"src={starIcon} alt="#"/>{doctor.avgRating}</span>
-                    <span>{doctor.totalRatin}</span>
-                </div>
-            </div>
-
-            <div>
-            <h3 className='patients'>+{doctor.totalPatients} Patients</h3>
-                <div>
-                   
-                   
-      <div className='getinfo'>
-       
-        
-              <Link to={`/item/${doctor.id}`} className="linkd">Book Appointment</Link>
-         
-       
-        
-      </div>
-
-                </div>
-            </div>
-        </div>
-        
-                    
-                        </div>
-                ))}
-            </div>
-    
-    </div>
-  );
+    );
 };
 
-}
-export default Book;
 
+
+export default DoctorList3;

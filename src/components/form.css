@@ -35,8 +35,7 @@
     background-position-x: initial;
     background-position-y: initial;
     background-size: initial;
-    background-repeat-x: initial;
-    background-repeat-y: initial;
+
     background-attachment: initial;
     background-origin: initial;
     background-clip: initial;
@@ -428,4 +427,30 @@ margin-left: -200px;
 
 #i634i{
   transform: translate(50px);
+}
+
+.form_doc{
+  font-family: karla;
+  font-size: 30px;
+  font-weight: 500;
+  color: rgb(8, 8, 89);
+  border-left: 2px dashed red;
+  border-bottom: 2px dashed red;
+  border-top: 2px dashed red;
+  margin-left: 20px;
+
+}
+
+
+.form_spec{
+  font-family: karla;
+  font-weight: 500;
+  font-size: 30px;
+  color: grey;
+  margin-top: -20px;
+  margin-bottom: 40px;
+  border-top: 2px dashed red;
+  border-right: 2px dashed red;
+  border-bottom: 2px dashed red;
+
 }

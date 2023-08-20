@@ -7,6 +7,8 @@ import Card from './Card';
 import image2 from './image1.png';
 import image1 from './image2.png';
 import image3 from './image3.png';
+import Email from './Email';
+
 
 
 
@@ -47,8 +49,33 @@ const Home = () => {
           description="Avoid endless back and forth communication; empowering with Google verified SMS & dynamic Email notifications. Confirmed Doctor Appointment, clinical procedure scheduling."
         />
       </div>
-  
-    
+      <div className='conti'>
+<div className="box" id='box1'> <div>
+<h2 className="number">
+30+
+</h2>
+ <p className="text_para">Years of Experience</p>
+</div> 
+</div>
+
+<div className="box" id='box2'> <div>
+<h2 className="number">
+150+
+</h2>
+<p className="text_para">Doctors</p>
+</div> 
+</div>
+
+<div className="box" id='box3'> <div>
+<h2 className="number">
+100%
+</h2>
+<p className="text_para">Patient Satisfaction</p>
+</div> 
+</div>
+</div>
+
+
         </div>
         </div>
        

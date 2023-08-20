@@ -8,7 +8,7 @@ import doctors from "./assets/data/doctors";
 
 import FooterSitemapLinks from "./components/footer";
 import Navbar from "./components/nav";
-import { BrowserRouter as Router, Routes, Route }
+import { BrowserRouter as Router, Routes, Route, Link }
     from 'react-router-dom';
 import Book from './pages/book';
 import Doctor from './pages/doctor';
@@ -40,7 +40,7 @@ function App() {
       <Router>
             <Navbar />
             <Routes>
-                <Route exact path='/' exact element={<Home />} />
+                <Route exact path='/' element={<Home />} />
                 <Route path='/book' element={<Book />} />
                 <Route path='/doctor' element={<Doctor />} />
                 <Route path='/hospital' element={<Hospital />} />
@@ -53,7 +53,10 @@ function App() {
                 <Route path= '/item/book' element={<Form/>} />
                 <Route path= '/item/book/?FirstName=&Last+Name=&Email=&PhoneNumber=&birthday=&appt=&Area=&City=&State=&Post+Code=/done' element={<Done />} />
           {doctors.map(item => (
-            <Route key={item.id} path={`/item/${item.id}`} element={<ItemDetail id={item.id} name={item.name} photo={item.photo} specialization={item.specialization}/>} />
+            <Route key={item.id} path={`/item/${item.id}`} element={<ItemDetail id={item.id} name={item.name} photo={item.photo} specialization={item.specialization} hospital={item.hospital}/>} />
+          ))}
+          {doctors.map(item => (
+            <Route key={item.id} path={`/item/book/${item.id}`} element={<Form id={item.id} name={item.name} specialization={item.specialization}/>} />
           ))}
      
                 
@@ -69,7 +72,7 @@ function App() {
   );
 }
 
-const ItemDetail = ({ id, name, photo, specialization }) => {
+const ItemDetail = ({ id, name, photo, specialization, hospital }) => {
   const [selectedTab, setSelectedTab] = useState('about'); // State to track selected tab
 
   const handleTabChange = (tab) => {
@@ -96,7 +99,8 @@ const ItemDetail = ({ id, name, photo, specialization }) => {
               <p>Time Slot: 12:00 AM - 1:00 PM</p>
               <p>Time Slot: 2:00 PM - 3:00 PM</p>
 
-              <a href="/item/book"><button class="lis" >Book</button></a>
+             
+              <Link to={`/item/book/${id}`} class="lis">BOOK</Link>
             </div>
             {/* More time slots */}
           </div>
@@ -122,7 +126,7 @@ const ItemDetail = ({ id, name, photo, specialization }) => {
   {selectedTab === 'about' && (
     <div className="about-content active-tab">
       <p>
-        Dr. [Doctor's Name] is a highly experienced and compassionate medical professional dedicated to providing exceptional healthcare services to patients. With over [Number] years of practice in the field of [Medical Specialty], Dr. [Last Name] has earned a reputation for excellence in diagnosis, treatment, and patient care. Graduating with honors from [Medical School], Dr. [Last Name] pursued further specialization through [Specialty Training Program], where they honed their expertise in [Specific Expertise]. As a firm believer in the importance of patient education, Dr. [Last Name] is committed to ensuring that each patient receives thorough explanations about their medical conditions and treatment options. Beyond their medical expertise, Dr. [Last Name] is known for their warm and empathetic bedside manner, fostering an environment of trust and comfort for patients seeking the best possible healthcare experience.
+        {name} is a highly experienced and compassionate medical professional dedicated to providing exceptional healthcare services to patients. With over [Number] years of practice in the field of [Medical Specialty], Dr. [Last Name] has earned a reputation for excellence in diagnosis, treatment, and patient care. Graduating with honors from {Hospital}, Dr. [Last Name] pursued further specialization through [Specialty Training Program], where they honed their expertise in [Specific Expertise]. As a firm believer in the importance of patient education, Dr. [Last Name] is committed to ensuring that each patient receives thorough explanations about their medical conditions and treatment options. Beyond their medical expertise, Dr. [Last Name] is known for their warm and empathetic bedside manner, fostering an environment of trust and comfort for patients seeking the best possible healthcare experience.
       </p>
       <p>
         Driven by a passion for continuous learning and advancement in the medical field, Dr. [Last Name] remains up-to-date with the latest advancements and breakthroughs in [Medical Specialty]. Their dedication to research and innovation has led to contributions in various medical publications and presentations at national and international conferences. Outside of their medical practice, Dr. [Last Name] is an active advocate for community health initiatives, volunteering their time and expertise to promote wellness and healthcare awareness. Patients describe their interactions with Dr. [Last Name] as enlightening and reassuring, as they take the time to listen to concerns and tailor treatments to individual needs. With a patient-centered approach and a commitment to delivering comprehensive care, Dr. [Last Name] continues to make a positive impact on the lives of countless individuals seeking optimal health and well-being.
@@ -138,7 +142,7 @@ const ItemDetail = ({ id, name, photo, specialization }) => {
         </div>
         <hr />
         <p className="feedback-text">
-          Dr. [Doctor's Last Name] is an exceptional physician who truly cares about his patients. I had the privilege of being under his care during a recent medical issue, and I was impressed by his thoroughness and empathy. He took the time to explain my condition and treatment options in a way that was easy to understand, alleviating my concerns. His dedication to staying updated on the latest medical advancements gives me confidence in his recommendations. I highly recommend Dr. [Last Name] to anyone seeking top-notch medical care.
+          {name} is an exceptional physician who truly cares about his patients. I had the privilege of being under his care during a recent medical issue, and I was impressed by his thoroughness and empathy. He took the time to explain my condition and treatment options in a way that was easy to understand, alleviating my concerns. His dedication to staying updated on the latest medical advancements gives me confidence in his recommendations. I highly recommend Dr. [Last Name] to anyone seeking top-notch medical care.
         </p>
       </div>
       <div className="feedback">
@@ -148,7 +152,7 @@ const ItemDetail = ({ id, name, photo, specialization }) => {
         </div>
         <hr />
         <p className="feedback-text">
-          My experience with Dr. [Last Name] was nothing short of outstanding. Not only is he incredibly knowledgeable in his field, but he also creates a welcoming and comfortable environment for his patients. His ability to listen attentively to my concerns and answer my questions put me at ease throughout my treatment journey. Dr. [Last Name]'s commitment to personalized care is evident in the way he tailors treatments to individual needs. His genuine compassion and dedication to improving patients' lives make him a true asset to the medical community.
+          My experience with {name} was nothing short of outstanding. Not only is he incredibly knowledgeable in his field, but he also creates a welcoming and comfortable environment for his patients. His ability to listen attentively to my concerns and answer my questions put me at ease throughout my treatment journey. Dr. [Last Name]'s commitment to personalized care is evident in the way he tailors treatments to individual needs. His genuine compassion and dedication to improving patients' lives make him a true asset to the medical community.
         </p>
       </div>
     </div>

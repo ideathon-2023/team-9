@@ -25,7 +25,7 @@
   padding: 1px;
   border-radius: 10px;
   font-size: large;
-  margin-left: 310px;
+  margin-left: 390px;
   background-color: rgba(245, 245, 245, 1);
 height: 30px;
 width: 80px;
@@ -136,4 +136,46 @@ a:hover{
 .search:hover{
   background-color: rgb(211, 173, 128);
   transition: 0.01s;
+}
+
+.box{
+  height: 100px;
+  width: 200px;
+  border-radius: 10px;
+  padding: 20px;
+  margin-left: 40px;
+  box-shadow: 1px 1px 5px;
+}
+
+.number{
+  font-size: 40px;
+  font-family: Montserrat;
+  font-weight: 700;
+  margin-top: -10px;
+}
+
+.text_para{
+font-size: 20px;
+}
+
+.conti{
+  display: flex;
+  transform: translate(150px);
+  margin-top: 50px;
+}
+
+#box1{
+  background-color: rgb(218, 160, 109);
+}
+
+#box2{
+  background-color:rgb(194, 178, 128);
+}
+
+#box3{
+  background-color:rgb(32, 222, 29);
+}
+
+.lis{
+  font-family: karla;
 }
