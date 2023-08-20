@@ -10,6 +10,16 @@ import doctorImg09 from "../images/doctor-img09.jpg";
 import doctorImg10 from "../images/doctor-img10.jpeg";
 import doctorImg11 from "../images/doctor-img11.png";
 import doctorImg12 from "../images/doctor-img12.png";
+import doctorImg13 from "../images/doctor-img13.jpg";
+import doctorImg14 from "../images/doctor-img14.png";
+import doctorImg15 from "../images/doctor-img15.png";
+import doctorImg16 from "../images/doctor-img16.png";
+import doctorImg17 from "../images/doctor-img17.png";
+import doctorImg18 from "../images/doctor-img18.png";
+import doctorImg19 from "../images/doctor-img19.png";
+import doctorImg20 from "../images/doctor-img20.jpg";
+import doctorImg21 from "../images/doctor-img21.png";
+import doctorImg22 from "../images/doctor-img22.png";
 
 const doctors = [
   {
@@ -134,6 +144,108 @@ const doctors = [
     totalPatients: 1500,
     hospital: "MBBS, MD, DM, MAMS, FRCP (Edinburgh), Commonwealth Scholar",
   },
+  {
+    id: "13",
+    name: "Dr Rahul Naithani",
+    specialization: "Oncology",
+    avgRating: 4.1,
+    totalRating: 123,
+    photo: doctorImg13,
+    totalPatients: 3131,
+    hospital: "MBBS,MD,DM,Fellowship in Bone Marrow Transplantation",
+  },
+  {
+    id: "14",
+    name: "DR. ARUNESH KUMAR",
+    specialization: "Pediatrics",
+    avgRating: 3.8,
+    totalRating: 21,
+    photo: doctorImg14,
+    totalPatients: 600,
+    hospital: "MBBS DNB MRCP(UK)",
+  },
+  {
+    id: "15",
+    name: "DR. RAJESH KUMAR",
+    specialization: "Medicine",
+    avgRating: 4.2,
+    totalRating: 11,
+    photo: doctorImg15,
+    totalPatients: 1600,
+    hospital: "MBBS MD",
+  },
+  {
+    id: "16",
+    name: "DR. MEENAKSHI SHARMA",
+    specialization: "Surgery",
+    avgRating: 3.9,
+    totalRating: 211,
+    photo: doctorImg16,
+    totalPatients: 1530,
+    hospital: "MBBS MS DNB",
+  },
+  {
+    id: "17",
+    name: "DR. AMITABH MALIK",
+    specialization: "Surgery",
+    avgRating: 3.29,
+    totalRating: 12,
+    photo: doctorImg17,
+    totalPatients: 2133,
+    hospital: "MBBS, MS",
+  },
+  {
+    id: "18",
+    name: "DR. RAJNISH MONGA",
+    specialization: "Gastroenterology",
+    avgRating: 4.1,
+    totalRating: 112,
+    photo: doctorImg18,
+    totalPatients: 1233,
+    hospital: "MBBS MD DM",
+  },
+  {
+    id: "19",
+    name: "DR. MAHESH WADHWANI",
+    specialization: "Surgeon",
+    avgRating: 4.2,
+    totalRating: 2,
+    photo: doctorImg19,
+    totalPatients: 721,
+    hospital: "MBBS MS MCh",
+  },
+  {
+    id: "20",
+    name: "Dr. Vikas Choudhary",
+    specialization: "Oncology",
+    avgRating: 3.8,
+    totalRating: 12,
+    photo: doctorImg20,
+    totalPatients: 924,
+    hospital: "MBBS MS MCh",
+  },
+  {
+    id: "21",
+    name: "DR. PIYUSH KUMAR AGRAWAL",
+    specialization: "Oncology",
+    avgRating: 3.8,
+    totalRating: 12,
+    photo: doctorImg21,
+    totalPatients: 1224,
+    hospital: "MBBS MS MCh - Surgical Oncology",
+  },
+  {
+    id: "22",
+    name: "DR. ASHUTOSH GOYAL",
+    specialization: "Surgeon",
+    avgRating: 4.1,
+    totalRating: 12,
+    photo: doctorImg22,
+    totalPatients: 224,
+    hospital: "MBBS MD DNB",
+  },
+
+
 ];
 
 export default doctors;

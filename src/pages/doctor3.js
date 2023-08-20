@@ -4,14 +4,14 @@ import "./Doctor.css";
 
 
 
-const Doctor = () => {
+const Doctor3 = () => {
   return (
    <div>
-    <div className='text1'><hr></hr>Our Doctors</div>
+    <div className='text1'><hr></hr>Find a Doctor</div>
     
     <DoctorList />
     <div className='listi'>
-      <ul >
+    <ul>
    <li> <a href='/doctor/'>1</a> </li>
    <li> <a href='/doctor/2'>2</a> </li>
    <li> <a href='/doctor/3'>3</a> </li>
@@ -21,4 +21,4 @@ const Doctor = () => {
   );
 };
 
-export default Doctor;
+export default Doctor3;

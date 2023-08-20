@@ -1,6 +1,7 @@
 import React from 'react';
 import image2 from "./image24.jpg";
 import "./hospital.css";
+import Email from './Email';
 
 const Hospital = () => {
   return (
@@ -23,7 +24,7 @@ Surrounded by the lush greenery of nearby parks and gardens, including the renow
 <p>In conclusion, the hospital in Sector 12D, Chandigarh, embodies the convergence of modern medical excellence and serene natural beauty. With its strategic location, advanced healthcare technologies, and dedicated personnel, it serves as a beacon of hope and healing for the community it serves. As patients and their families traverse the path to recovery, they are enveloped by the tranquil landscapes nearby, further enhancing their journey towards well-being.</p>
 <hr />
 </div>
-
+<Email />
 </div>
 
   );

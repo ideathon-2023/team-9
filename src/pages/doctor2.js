@@ -1,17 +1,17 @@
 import React from 'react';
-import DoctorList from '../components/DoctorList';
+import DoctorList2 from '../components/DoctorList2';
 import "./Doctor.css";
 
 
 
-const Doctor = () => {
+const Doctor2 = () => {
   return (
    <div>
-    <div className='text1'><hr></hr>Our Doctors</div>
+    <div className='text1'><hr></hr>Find a Doctor</div>
     
-    <DoctorList />
+    <DoctorList2/>
     <div className='listi'>
-      <ul >
+    <ul>
    <li> <a href='/doctor/'>1</a> </li>
    <li> <a href='/doctor/2'>2</a> </li>
    <li> <a href='/doctor/3'>3</a> </li>
@@ -21,4 +21,4 @@ const Doctor = () => {
   );
 };
 
-export default Doctor;
+export default Doctor2;

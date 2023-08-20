@@ -1,16 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import  { useState, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 import emailjs from '@emailjs/browser';
 
-const Form = () => {
+const Form = ({ id, name, specialization} ) => {
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_2ai74yj', 'template_nj8cbbg', form.current, 'FXNT2k7prrywiIcSk')
+    emailjs.sendForm('service_2ai74yj', 'template_2fnezgf', form.current, 'FXNT2k7prrywiIcSk')
+      .then((result) => {
+          console.log(result.text);
+          console.log("message sent");
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
+
+  const sendEmailp = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_2ai74yj', 'template_eytnwop', form.current, 'FXNT2k7prrywiIcSk')
       .then((result) => {
           console.log(result.text);
           console.log("message sent");
@@ -24,18 +37,13 @@ const Form = () => {
   const successMessageRef = useRef(null);
 
   const handleSubmit = event => {
-    event.preventDefault(); // Prevent the default form submission behavior
-
-    // Simulate form submission by setting a timeout
-    // In a real application, you would replace this with actual submission logic
+    event.preventDefault(); 
     setTimeout(() => {
-      // After a delay, mark the form as submitted
+      
       setIsSubmitted(true);
       scrollToSuccessMessage();
-    }, 2000); // Simulate a 2-second delay
-
-    // You can also perform actual form submission logic here
-    // For example, sending data to a server using fetch or an API library
+    }, 2000); 
+  
   };
 
   const scrollToSuccessMessage = () => {
@@ -47,6 +55,14 @@ const Form = () => {
     }
   };
 
+  const combinedSubmit = (event) => {
+    handleSubmit(event);
+    sendEmail(event);
+    sendEmailp(event);
+  };
+
+
+
 
     return (
         <div>
@@ -55,7 +71,7 @@ const Form = () => {
     <div class="blueeBG">
     </div>
     <div class="responsive-container-block container">
-      <form class="form-box" ref={form} onSubmit={sendEmail} >
+      <form class="form-box" ref={form} onSubmit={combinedSubmit} >
         <div class="container-block form-wrapper">
           <p class="text-blk contactus-head">
            Appointment Form
@@ -63,7 +79,12 @@ const Form = () => {
           <p class="text-blk contactus-subhead">
            Fill in Details
           </p>
+          <div className='helowo'>
+          <input className="form_doc"  value={name} name="doctor" />
+          <input className="form_spec"  value={specialization} name="speco" /> 
+          </div>
           <div class="responsive-container-block">
+            
             <div class="responsive-cell-block wk-ipadp-6 wk-tab-12 wk-mobile-12 wk-desk-6" id="i10mt">
               <p class="text-blk input-title">
                 FIRST NAME
@@ -129,14 +150,13 @@ const Form = () => {
             </div>
           </div>
           </div>
-          <button class="submit-btn" >
-            BOOK
-          </button>
+         
+          <button class="submit-btn">BOOK</button>
          
         </div>
         
       </form>
-      {isSubmitted && <div ref={successMessageRef} class="cardf"><div ><img className='cardim' src="https://img.freepik.com/free-icon/check_318-642305.jpg?t=st=1692421017~exp=1692421617~hmac=d7c257e28bda61d18b182bd17e06eec6bf0f7bb6985b1595faaf099ebd01f520" alt="" /></div><div>Your Appointment Has Been Booked Successfully</div>
+      {isSubmitted && <div ref={successMessageRef} class="cardf"><div ><img className='cardim' src="https://img.freepik.com/free-icon/check_318-642305.jpg?t=st=1692421017~exp=1692421617~hmac=d7c257e28bda61d18b182bd17e06eec6bf0f7bb6985b1595faaf099ebd01f520" alt="" /></div><div>Your Appointment Has Been Booked Successfully</div><br /><div>A Confirmation Mail Has Been Send To Your Account!</div>
         </div>}
     </div>
   </div>

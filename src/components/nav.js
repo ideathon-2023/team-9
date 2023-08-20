@@ -12,7 +12,7 @@ const Navbar = () => {
         <li ><a href="/book">📅 Book Appointment</a></li>
         
         <li><a href="/doctor">🙍 Doctors</a></li>
-        <li><a href="/hospital">➕ Hospitals & Clinics</a></li>
+        <li><a href="/hospital">➕ Hospital</a></li>
         
         <li className='right' id='login'><a classname="here" href="/login">LOGIN</a></li>
         <li className='right' id='register'><a classname="here" href="/register">REGISTER</a></li>
