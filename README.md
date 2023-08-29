@@ -1,70 +1,18 @@
-# Getting Started with Create React App
+# Team-9
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+* Lakshya Verma
+* Dharya Jasuja
+* Nandini Singh
 
-## Available Scripts
+## Medical Appointment Booking Website
 
-In the project directory, you can run:
+Our project centers around the creation of an intuitive Medical Appointment Booking Website that places a premium on exceptional user experience. Our primary objective is to simplify the appointment booking process, empowering users to effortlessly schedule their medical consultations. This is achieved by enabling users to efficiently search for specific categories, such as gynecologists or OPD services, streamlining the booking journey.
 
-### `npm start`
+Central to our website's functionality is the innovative consultancy tab. This resource serves as a valuable tool, offering users personalized recommendations for appointment timings and doctors. Through a careful evaluation of their service histories and specialties, users can confidently make informed decisions about their healthcare providers.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To further facilitate effective communication, we are implementing an email connectivity feature. This functionality establishes a direct channel between users and medical professionals, promoting prompt and direct interactions for inquiries and concerns.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Incorporating real-time capabilities, our website will feature a dynamic token system. This system enhances the overall efficiency of the appointment process, reducing wait times and ensuring a smoother clinic experience. Moreover, we're committed to including all the essential elements required for a comprehensive user experience, such as an interactive feedback section. By actively seeking user input, we aim to continuously refine and optimize the website's performance.
 
-### `npm test`
+In summary, our Medical Appointment Booking Website not only simplifies the appointment booking process but also emphasizes personalized care through the consultancy tab and direct email connectivity. The real-time token system and the incorporation of user feedback solidify our dedication to creating a seamless and user-centric platform that addresses the needs of both patients and medical professionals.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
